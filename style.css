@@ -1,0 +1,65 @@
+@import "normalize-css";
+@import "flexboxgrid";
+
+body,
+html {
+  font-family: Schoolbell;
+  height: 100%;
+  color: #7e39a4;
+  overflow: hidden;
+}
+
+body {
+  background-image: url('images/pizza-bg.jpg');
+  background-size: cover;
+}
+
+#bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#pizza-container {
+  height: 100%;
+  text-align: center;
+}
+
+#pizza {
+  cursor: pointer;
+  display: block;
+  width: 182px;
+  height: 184px;
+  margin: 170px auto 0px auto;
+}
+
+#pizza img {
+  width: 100%;
+  height: 100%;
+}
+
+#clicks {
+  color: #ff33cc;
+  font-size: 50px;
+  margin: 20px 0px 10px 0px;
+  height: 70px;
+}
+
+#message {
+  font-size: 25px;
+  height: 100px;
+  color: #3366ff;
+}
+
+button {
+  color: #fff;
+  border: 0px;
+  background: none;
+}
+
+#restart {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+}

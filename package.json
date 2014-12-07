@@ -1,0 +1,32 @@
+{
+  "name": "pizza-clicker",
+  "description": "it's not just clicking a pizza",
+  "version": "0.0.0",
+  "repository": {
+    "url": "git://github.com/mossyowl/pizza-clicker.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "watch-js": "watchify index.js -d -o bundle.js",
+    "bundle-js": "browserify index.js -d -p [minifyify --map bundle.map.json --output bundle.map.json] > bundle.js",
+    "bundle-css": "rework-npm style.css -o bundle.css",
+    "watch-css": "gazer -p style.css npm run bundle-css",
+    "bundle": "npm run bundle-js & npm run bundle-css",
+    "watch": "npm run watch-js & npm run watch-css",
+    "start": "serve -p 3123 & npm run watch"
+  },
+  "dependencies": {
+    "domquery": "^1.2.0",
+    "flexboxgrid": "^5.0.0",
+    "level-js": "^2.1.6",
+    "levelup": "^0.19.0",
+    "normalize-css": "^2.3.1"
+  },
+  "devDependencies": {
+    "browserify": "^7.0.0",
+    "minifyify": "^4.4.0",
+    "rework-npm-cli": "^0.1.1",
+    "serve": "^1.4.0",
+    "watchify": "^2.1.1"
+  }
+}
