@@ -13,6 +13,7 @@
     "watch-css": "gazer -p style.css npm run bundle-css",
     "bundle": "npm run bundle-js & npm run bundle-css",
     "watch": "npm run watch-js & npm run watch-css",
+    "dist": "browserify index.js -o bundle.js && git add bundle.js && git commit -m 'update bundle' && git push",
     "start": "serve -p 3123 & npm run watch"
   },
   "dependencies": {
